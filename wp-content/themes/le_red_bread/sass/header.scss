@@ -1,0 +1,74 @@
+/**variables**/
+
+$fc_redbrand: #db272a;
+$fc_brownbrand: #400c0d;
+$fc_lightgrey: #a1a1a1;
+$fc_medgrey: #808080;
+$fc_darkgrey: #333333;
+$fc_brandblack: #222222;
+
+
+$bg_offwhite:  #fafafa;
+$bg_white: #ffffff;
+
+
+$brand_border: 1px solid #e1e1e1;
+
+/** **/
+.site-header {
+  background-color: $bg_offwhite;
+  padding-top: 2rem;
+}
+
+.site-branding {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border: $brand_border;
+  background-color: $bg_white;
+  align-items:center;
+
+
+}
+
+.social ul {
+  list-style: none;
+  display: flex;
+  margin-left: 10rem;
+
+  li {
+    padding: 1rem;
+    color: $fc_medgrey;
+    margin-top: 1rem;
+    font-size: 20px;
+
+  }
+}
+
+.site-branding .logo img {
+    width: 300px;
+    margin-left: 5rem;
+
+  }
+
+  .search-nav {
+    display: flex;
+
+
+  #searchform {
+   margin-right: 5rem;
+   width: 80%;
+     input {
+       outline: none;
+       border: none;
+       background-color: transparent;
+       text-transform: uppercase;
+       }
+  }
+
+  .search-icon {
+    background: none;
+    border: none;
+  }
+
+}
