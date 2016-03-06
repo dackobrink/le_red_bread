@@ -1,0 +1,66 @@
+$fc_redbrand: #db272a;
+$fc_brownbrand: #400c0d;
+$fc_lightgrey: #a1a1a1;
+$fc_medgrey: #808080;
+$fc_darkgrey: #333333;
+$fc_brandblack: #222222;
+
+
+$bg_offwhite:  #fafafa;
+$bg_white: #ffffff;
+
+
+$brand_border: 1px solid #e1e1e1;
+
+
+.site-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $fc_brandblack;
+}
+
+.footer-logo {
+  padding-top: 2rem;
+}
+
+.footer-contact {
+list-style-type: none;
+  color: white;
+  h3 {
+    padding-left: 11px;
+  }
+
+  li {
+    margin: 1rem;
+
+    .social-icons {
+      padding: 10px;
+    }
+  }
+}
+
+.footer-business {
+  list-style-type: none;
+  overflow: none;
+  color: white;
+  margin-right: 5rem;
+
+  h3 {
+    padding-left: 11px;
+  }
+
+  li {
+    margin: 1rem;
+  }
+}
+
+.footer-logo {
+  img {
+    margin-top: 3rem;
+  }
+}
+#footer-title {
+  color: $fc_medgrey;
+
+}

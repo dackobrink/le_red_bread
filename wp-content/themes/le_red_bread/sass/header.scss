@@ -14,6 +14,7 @@ $bg_white: #ffffff;
 
 $brand_border: 1px solid #e1e1e1;
 
+
 /** **/
 .site-header {
   background-color: $bg_offwhite;
@@ -27,6 +28,7 @@ $brand_border: 1px solid #e1e1e1;
   border: $brand_border;
   background-color: $bg_white;
   align-items:center;
+  width: 100vw;
 
 
 }
@@ -34,7 +36,7 @@ $brand_border: 1px solid #e1e1e1;
 .social ul {
   list-style: none;
   display: flex;
-  margin-left: 10rem;
+
 
   li {
     padding: 1rem;
@@ -53,10 +55,14 @@ $brand_border: 1px solid #e1e1e1;
 
   .search-nav {
     display: flex;
+    padding-left: 6rem;
+    background-color: white;
+    width: 100vw;
+    box-shadow: 0 4px 2px -2px $fc_lightgrey;
 
 
   #searchform {
-   margin-right: 5rem;
+
    width: 80%;
      input {
        outline: none;
@@ -67,8 +73,14 @@ $brand_border: 1px solid #e1e1e1;
   }
 
   .search-icon {
-    background: none;
+    background: transparent;
     border: none;
+    text-decoration: none;
+    box-shadow: none;
+    i.fa.fa-search {
+      font-size: 1.2rem;
+      color: $fc_medgrey;
+    }
   }
 
 }

@@ -11,26 +11,32 @@ $fc_brandblack: #222222;
 
 $brand_border: 1px solid #e1e1e1;
 
+$base_size: 16px;
+
 /* Links */
 
 a {
 	color: $fc_medgrey;
+	font-size: $base_size;
 
-	&:visited {
+	&:active {
 		color:$fc_redbrand;
 	}
+	&:focus,
 	&:hover,
 	&:focus,
 	&:active {
 		color: $fc_brownbrand;
 	}
-	&:focus {
-		outline: thin dotted;
-	}
+
 	&:hover,
 	&:active {
 		outline: 0;
 	}
+
+	&.ex1:hover, &.ex1:active {
+    color: red;
+}
 
 }
 
@@ -49,6 +55,10 @@ a {
 		margin: 0;
 		padding-left: 0;
 
+
+		:first-child {
+			border-left: $brand_border
+		}
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -95,6 +105,13 @@ a {
 		border-bottom: $brand_border;
 		border-right: $brand_border;
 		font-weight: bold;
+		font-size: 16px;
+
+			:first-child {
+
+				border-left: none;
+			}
+
 
 
 		&:hover > a,
