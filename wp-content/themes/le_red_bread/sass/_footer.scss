@@ -12,6 +12,9 @@ $bg_white: #ffffff;
 
 $brand_border: 1px solid #e1e1e1;
 
+.site-footer {
+background-color: $fc_darkgrey;
+}
 
 .site-info {
   width: 100%;
@@ -33,10 +36,12 @@ list-style-type: none;
 
   li {
     margin: 1rem;
+    font-family: 'open sans';
+    font-size: .9rem;
+    font-weight: lighter;
+    text-decoration: none;
 
-    .social-icons {
-      padding: 10px;
-    }
+
   }
 }
 
@@ -52,7 +57,16 @@ list-style-type: none;
 
   li {
     margin: 1rem;
+    font-family: 'open sans';
+    font-size: .9rem;
+    font-weight: lighter;
+
+    .weekday {
+      font-weight: bold;
+    }
   }
+
+
 }
 
 .footer-logo {
@@ -62,5 +76,16 @@ list-style-type: none;
 }
 #footer-title {
   color: $fc_medgrey;
+  font-family: 'overlock';
+  text-transform: uppercase;
+  font-weight: light;
+}
 
+.copyright {
+  background-color: #333;
+  line-height: 3rem;
+  text-align: center;
+  color: $bg_white;
+  font-size: 0.7rem;
+  font-family: 'overlock';
 }

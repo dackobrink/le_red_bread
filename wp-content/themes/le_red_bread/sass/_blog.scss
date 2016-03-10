@@ -1,0 +1,29 @@
+
+
+.entry-header {
+  margin-top: 3rem;
+  margin-left: 6rem;
+
+}
+
+.entry-title a {
+  color: $fc_redbrand;
+  text-decoration: none;
+  font-family: 'overlock';
+  font-size: 1.8rem;
+}
+
+.entry-meta {
+  color: $fc_lightgrey;
+  font-family: 'open sans, sans-serif'
+
+}
+
+.entry-content {
+  color: $fc_medgrey;
+  font-family: 'overlock';
+}
+
+.entry-content p {
+  margin-left: 6rem;
+}

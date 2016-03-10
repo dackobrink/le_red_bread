@@ -14,8 +14,8 @@
 
 					<ul class="footer-contact">
 							<span id="footer-title"><h3>Contact</h3></span>
-							<li><i class="fa fa-envelope"></i>info@leredbread.com</li>
-							<li><i class="fa fa-phone"></i>(555)343 456 7891</li>
+							<li><i class="fa fa-envelope"></i> info@leredbread.com</li>
+							<li><i class="fa fa-phone"></i> (555) 343 456 7891</li>
 							<li><span class="social-icons">
 								<i class="fa fa-facebook"></i>
 								<i class="fa fa-twitter"></i>
@@ -37,11 +37,12 @@
 
 
 
-
-
-
-
 				</div><!-- .site-info -->
+
+				<div class="copyright">
+						<p> Copyright © 2015 Le Red Bread </p>
+				</div>
+
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

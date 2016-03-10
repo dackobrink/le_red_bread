@@ -19,12 +19,12 @@ $brand_border: 1px solid #e1e1e1;
 .site-header {
   background-color: $bg_offwhite;
   padding-top: 2rem;
+  margin: 0 auto;
 }
 
 .site-branding {
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
   border: $brand_border;
   background-color: $bg_white;
   align-items:center;
@@ -42,7 +42,7 @@ $brand_border: 1px solid #e1e1e1;
     padding: 1rem;
     color: $fc_medgrey;
     margin-top: 1rem;
-    font-size: 20px;
+    font-size: 14px;
 
   }
 }
@@ -59,6 +59,8 @@ $brand_border: 1px solid #e1e1e1;
     background-color: white;
     width: 100vw;
     box-shadow: 0 4px 2px -2px $fc_lightgrey;
+    font-family: 'overlock';
+    line-height: .8rem;
 
 
   #searchform {
@@ -69,6 +71,9 @@ $brand_border: 1px solid #e1e1e1;
        border: none;
        background-color: transparent;
        text-transform: uppercase;
+       font-family: 'overlock';
+       font-weight: light;
+
        }
   }
 
@@ -83,4 +88,10 @@ $brand_border: 1px solid #e1e1e1;
     }
   }
 
+}
+
+.main-navigation .current-menu-item li a{
+  font-color: $fc_brownbrand;
+  text-decoration: underline;
+  text-decoration-color: $fc_redbrand;
 }
