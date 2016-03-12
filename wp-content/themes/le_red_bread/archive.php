@@ -12,6 +12,8 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
+
+			<div class="blog-page-container">
 			<header class="page-header">
 				<?php
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -38,6 +40,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+	</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -65,6 +65,11 @@ $brand_border: 1px solid #e1e1e1;
 	display: block;
 }
 
+/** **/
+.content-area {
+	width: 100vw;
+}
+
 //** PRODUCTS PAGE **//
 .products-page {
 	display: flex;
@@ -124,13 +129,6 @@ $brand_border: 1px solid #e1e1e1;
 	display: flex;
 }
 
-// .site-main {
-// 	width: 70%;
-// }
-
-.widget-area {
-	width: 30%;
-}
 
 //**FRONT PAGE GENERAL **//
 
@@ -166,6 +164,8 @@ $brand_border: 1px solid #e1e1e1;
 
 }
 
+
+
 ///*** FP PRODUCT TYPE LIST ***///
 
 .type-container {
@@ -196,26 +196,64 @@ $brand_border: 1px solid #e1e1e1;
 
 }
 
+.see-more-container{
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+
+.see-more-here {
+	width: 1024px;
+	text-align: center;
+	background-color: $bg_offwhite;
+	line-height: 3rem;
+	border: $brand_border;
+	font-family: 'open sans';
+	font-weight: 100;
+		a {
+			padding: .5rem 1.2rem .5rem 1.2rem;
+			margin-left: 2rem;
+			text-decoration: none;
+			color: $bg_white;
+			background-color: $fc_brownbrand;
+ 	}
+
+	a:active, a:focus, a:hover  {
+		background-color: #6b1416;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+
 //**DECORATION **//
 
 .decoration {
 	margin-bottom: 2rem;
 	width: 1024px;
 	display: flex;
-	align-items: center;
+	// align-items: center;
 	justify-content: center;
 }
 
 .dot {
 	background-color: #e1e1e1;
-	width: 1rem;
-	height: 1rem;
+	width: .8rem;
+	height: .8rem;
 	border-radius: 50%;
+	position: absolute;
+	top: -7px;
 
 }
 
 .slash {
-	border-bottom: #e1e1e1;
+	width: 350px;
+	background-color: #e1e1e1;
+	height: .07rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
 
 }
 
@@ -249,12 +287,16 @@ $brand_border: 1px solid #e1e1e1;
 			justify-content: center;
 		}
 
-		.featured-item {
-			flex: 0 1 25%;
-			border: 1px solid $bg_offwhite;
-			box-shadow: 0 4px 2px -2px #a1a1a1;
-		}
+			.featured-item {
+				flex: 0 1 25%;
+				border: 1px solid $bg_offwhite;
+		  	box-shadow:0 2px 3px 0 rgba(150,150,150,.25);
 
+					a {
+						text-decoration: none;
+					}
+			}
+	}
 
 			.featured-image {
 				width: 260px;
@@ -266,10 +308,9 @@ $brand_border: 1px solid #e1e1e1;
 					 width: 100%;
 				 }
 
-
 	}
 
-}
+
 
 //***ABOUT PAGE **///
 
@@ -331,9 +372,86 @@ $brand_border: 1px solid #e1e1e1;
 .our-story {
 	font-family: 'open sans';
 	font-weight: 100;
+
 	h2 {
 		text-align: center;
 		color: $fc_brandblack;
 
+	}
+}
+
+
+//*** SideBar **///
+
+
+.sidebar-area {
+	width: 27vw;
+	display: flex;
+	flex-direction: column;
+	padding-left: 3rem;
+	padding-top: 3rem;
+	font-family: 'open sans';
+	font-weight: 100;
+	border-left: $brand_border;
+
+	a{
+		color: $fc_redbrand;
+		text-decoration: none;
+	}
+
+	a:active, a:focus, a:hover {
+		color: $fc_brownbrand;
+		text-decoration: underline;
+	}
+
+
+	li {
+		list-style-type: none;
+	}
+	.day-of-week {
+		font-weight: 600;
+		color: $fc_redbrand;
+	}
+
+
+.text-widget {
+
+	.fa {
+		color: $fc_lightgrey;
+	}
+
+
+}
+
+.widget_archive{
+	ul {
+		 padding:0px;
+		 margin: 0px;
+		 }
+}
+	.widget-title {
+		color: $fc_brandblack;
+		font-family: 'overlock';
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+
+
+}
+
+#post-19 {
+	width: 65%;
+	padding-left: 7rem;
+	padding-right: 2rem;
+		.entry-title {
+			font-family: 'overlock';
+		}
+
+	.entry-content {
+
+		h2{
+			font-size:1.8rem;
+			color: grey;
+		}
 	}
 }

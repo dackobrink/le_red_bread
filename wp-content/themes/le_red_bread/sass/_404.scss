@@ -1,0 +1,75 @@
+.main-404 {
+ display: flex;
+ width: 100vw;
+
+   .error-404 {
+     width: 65%;
+     padding-left: 7rem;
+
+       .widgettitle{
+         font-family: 'overlock';
+         color: $fc_medgrey;
+       }
+       ul {
+          padding:0px;
+          margin: 0px;
+          }
+
+       li {
+         color: $fc_medgrey;
+         list-style-type: none;
+         font-family: 'open sans';
+          font-weight: 100;
+         a {
+           color: $fc_redbrand;
+           text-decoration: none;
+
+         }
+
+
+
+       }
+
+       fieldset {
+         border: none;
+
+           .search-field {
+             padding: .5rem .3rem;
+             background-color: $bg_offwhite;
+             font-family: 'open sans';
+             font-weight: bold;
+           }
+
+           .search-submit {
+             background-color: $fc_brownbrand;
+             box-shadow: none;
+             color: white;
+             padding: .8rem 1.5rem .8rem 1.5rem;
+
+             .fa-search {
+               text-shadow: none;
+               text-transform: none;
+               font-size: 1.1rem;
+
+             }
+           }
+
+
+     }
+   }
+}
+
+#main > div > section > div > div.widget.widget_archive > p {
+  font-family: 'open sans';
+  font-weight: 100;
+  color: $fc_medgrey;
+}
+
+#archives-dropdown--1 {
+    font-family: 'open sans';
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    max-width: 100%;
+
+}

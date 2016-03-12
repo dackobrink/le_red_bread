@@ -1,0 +1,180 @@
+//**FRONT PAGE GENERAL **//
+
+.front-title {
+	font-family: 'overlock';
+	color: $fc_brandblack;
+	font-size: 16px;
+	width: 1024px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+//*BANNER**//
+
+.banner {
+	background: url(../../images/hero-bread.jpg) center top no-repeat;
+	height: 550px;
+	width: 100%;
+	background-size: cover;
+	margin-bottom: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-text {
+	font-weight: bold;
+	color: $bg_white;
+	font-size: 6rem;
+	text-transform: uppercase;
+	font-family: 'overlock';
+	text-shadow: 2px 1px 2px rgba(100,100,100,.75)
+
+}
+
+
+
+///*** FP PRODUCT TYPE LIST ***///
+
+.type-container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.type-list {
+	display: flex;
+	width: 1024px;
+	justify-content: center;
+
+	.type-item {
+		font-family: 'open sans';
+		font-size: 12px;
+		font-weight: lighter;
+
+	}
+	.type-title {
+		color: $fc_brownbrand;
+		font-family: 'overlock';
+		font-size: 16px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+
+}
+
+.see-more-container{
+	display: flex;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+}
+
+.see-more-here {
+	width: 1024px;
+	text-align: center;
+	background-color: $bg_offwhite;
+	line-height: 3rem;
+	border: $brand_border;
+	font-family: 'open sans';
+	font-weight: 100;
+		a {
+			padding: .5rem 1.2rem .5rem 1.2rem;
+			margin-left: 2rem;
+			text-decoration: none;
+			color: $bg_white;
+			background-color: $fc_brownbrand;
+ 	}
+
+	a:active, a:focus, a:hover  {
+		background-color: #6b1416;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+}
+
+
+//**DECORATION **//
+
+.decoration {
+	margin-bottom: 2rem;
+	width: 1024px;
+	display: flex;
+	// align-items: center;
+	justify-content: center;
+}
+
+.dot {
+	background-color: #e1e1e1;
+	width: .8rem;
+	height: .8rem;
+	border-radius: 50%;
+	position: absolute;
+	top: -7px;
+
+}
+
+.slash {
+	width: 350px;
+	background-color: #e1e1e1;
+	height: .07rem;
+	position: relative;
+	display: flex;
+	justify-content: center;
+
+}
+
+
+
+
+//**FP Latest News***//
+.latest-news {
+	background-color: $bg_offwhite;
+	width: 100vw;
+	padding: 3rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: $brand_border;
+}
+
+
+
+
+.featured-container {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+
+
+		.featured-list {
+			display: flex;
+			width: 1024px;
+			justify-content: center;
+		}
+
+			.featured-item {
+				flex: 0 1 25%;
+				flex-wrap: wrap;
+				border: 1px solid $bg_offwhite;
+		  	box-shadow:0 2px 3px 0 rgba(150,150,150,.25);
+
+					a {
+						text-decoration: none;
+					}
+			}
+	}
+
+			.featured-image {
+				width: 260px;
+				height: 200px;
+
+				 img {
+					 position: relative;
+					 height: 100%;
+					 width: 100%;
+				 }
+
+	}

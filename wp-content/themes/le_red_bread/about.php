@@ -14,6 +14,13 @@ get_header(); ?>
               <?php echo CFS()->get('tagline'); ?>
           </div>
 
+
+          <div class="decoration">
+            <div class="slash">
+                <div class="dot"></div>
+            </div>
+          </div>
+
           <div class="team-company">
             <div class="about-team">
               <img src="<?php bloginfo('template_directory'); ?>/images/team.jpg" class="team" alt="Le Red Bread Team" >

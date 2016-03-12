@@ -85,13 +85,27 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function red_starter_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/builtrid/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+if(is_single()){
+	wp_enqueue_scripts( 'jquery');
+
+	wp_enqueue_scripts ('lrb_comment_close', get_template_directory_uri() . '/js/script.js', array( 'jquery'), false, true );
+
+	wp_localize_script( 'lrb_comment_close', 'lrb_vars', array(
+		'ajax_url'=>admin_url( 'admin-ajax.php' ),
+		'comment_nonce'=> wp_create_nonce( 'lrb_comment_status' ),
+		'post_id'=> get_the_ID()
+	) );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+
+
 
 /**
  * Custom template tags for this theme.
@@ -104,8 +118,32 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 
+// function lrb_function_close_ajax(){
+//
+// 	check_ajax_referer( 'lrb_comment_status', 'security' );
+//
+// 	if  ( ! current_user_can( 'edit_posts') ) {
+// 		exit;
+// 	}
+//
+// 	$id = $_POST['the_post_id'];
+//
+// 	if  ( isset ( $id ) && is_numeric( $id ) ) {
+// 		$the_post = array(
+//			'rest_url' => esc_url_raw( rest_url() ),
+// 			'comment_nonce' => wp_create_nonce( 'wp_rest' ),
+// 			'post_id' => get_the_ID()
+// 		);
+//
+//
+// 		wp_update_post( $the_post );
+// 	}
+// 	exit;
+// }
+//
+// add_action ('wp_ajax_red_comment_ajax', 'lrb_function_close_ajax');
 
-//** FEATURED SHORTENED TITLE **///
+//** FEATURED SHORTENED
 function the_titlesmall($before = '', $after = '', $echo = true, $length = false) { $title = get_the_title();
 
 	if ( $length && is_numeric($length) ) {

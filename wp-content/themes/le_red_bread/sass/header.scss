@@ -18,8 +18,7 @@ $brand_border: 1px solid #e1e1e1;
 /** **/
 .site-header {
   background-color: $bg_offwhite;
-  padding-top: 2rem;
-  margin: 0 auto;
+  padding-top: 2.4rem;
 }
 
 .site-branding {
@@ -58,9 +57,14 @@ $brand_border: 1px solid #e1e1e1;
     padding-left: 6rem;
     background-color: white;
     width: 100vw;
-    box-shadow: 0 4px 2px -2px $fc_lightgrey;
-    font-family: 'overlock';
-    line-height: .8rem;
+    box-shadow:0 2px 3px 0 rgba(150,150,150,.25);
+    font-family: 'open sans';
+    line-height: 1rem;
+
+    li {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
 
   #searchform {
@@ -71,8 +75,8 @@ $brand_border: 1px solid #e1e1e1;
        border: none;
        background-color: transparent;
        text-transform: uppercase;
-       font-family: 'overlock';
-       font-weight: light;
+       font-family: 'open sans';
+       font-weight: 100;
 
        }
   }
@@ -89,6 +93,7 @@ $brand_border: 1px solid #e1e1e1;
   }
 
 }
+
 
 .main-navigation .current-menu-item li a{
   font-color: $fc_brownbrand;

@@ -21,12 +21,12 @@ function red_starter_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'red_starter_body_classes' );
 
-// function lrb_the_url() {
-// 	return home_url();
-// }
-// add_filter( 'login_headerurl', 'lrb_the_url');
+function lrb_the_url() {
+	return home_url();
+}
+add_filter( 'login_headerurl', 'lrb_the_url');
 
-//changes login image url
+
 function lrb_logo() {
      echo '<style type="text/css">
          h1 a { background-image:url('.get_template_directory_uri().'/images/lrb-logo.svg) !important;
@@ -41,7 +41,7 @@ add_action('login_head', 'lrb_logo');
 
 add_filter('body_class', 'red_starter_body_classes');
 
-function lrb_modify_archie_loop ( $query ) {
+function lrb_modify_archive_loop ( $query ) {
 	if ( is_post_type_archive ( array ( 'product') ) && !is_admin() && $query->is_main_query() ) {
 		$query->set ( 'orderby', 'title' );
 		$query->set( 'order', 'ASC');
@@ -50,20 +50,64 @@ function lrb_modify_archie_loop ( $query ) {
 
 }
 
-add_action ('pre_get_posts', 'lrb_modify_archie_loop');
+add_action ('pre_get_posts', 'lrb_modify_archive_loop');
+
+
+
+
+
+function lrb_wp_trim_excerpt( $text ) {
+    $raw_excerpt = $text;
+
+    if ( '' == $text ) {
+        // retrieve the post content
+        $text = get_the_content('');
+
+        // delete all shortcode tags from the content
+        $text = strip_shortcodes( $text );
+
+        $text = apply_filters( 'the_content', $text );
+        $text = str_replace( ']]>', ']]&gt;', $text );
+
+        // indicate allowable tags
+        $allowed_tags = '<p>,<a>,<em>,<strong>,<blockquote>,<cite>';
+        $text = strip_tags( $text, $allowed_tags );
+
+        // change to desired word count
+        $excerpt_word_count = 50;
+        $excerpt_length = apply_filters( 'excerpt_length', $excerpt_word_count );
+
+        // create a custom "more" link
+        $excerpt_end = '<span>[...]</span><p><a href="' . get_permalink() . '" class="read-more">Read more &rarr;</a></p>'; // modify excerpt ending
+        $excerpt_more = apply_filters( 'excerpt_more', ' ' . $excerpt_end );
+
+        // add the elipsis and link to the end if the word count is longer than the excerpt
+        $words = preg_split( "/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY );
+
+        if ( count( $words ) > $excerpt_length ) {
+            array_pop( $words );
+            $text = implode( ' ', $words );
+            $text = $text . $excerpt_more;
+        } else {
+            $text = implode( ' ', $words );
+        }
+    }
+    return apply_filters( 'wp_trim_excerpt', $text, $raw_excerpt );
+}
+
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
+add_filter( 'get_the_excerpt', 'lrb_wp_trim_excerpt' );
+
 
 /**
 * LRB ARCHIVE TITLE
 **/
-
-function lrb_archive_title($title) {
-	if ( is_post_type_archive( array( 'product') ) ) {
-		$title = 'Our Products Are Made Fresh Daily';
-	} elseif (is_tax( 'product-type' ) ){
-		$title = single_cat_title( '', false );
-	}
-
-	return $title;
-
+function lrb_archive_title( $title ) {
+    if ( is_post_type_archive( array( 'product') ) ) {
+        $title = 'Our Products Are Made Fresh Daily';
+    } elseif ( is_tax( 'product_type' ) ) {
+        $title = single_term_title( '', false );
+    }
+    return $title;
 }
-add_filter( 'get_the_archive_title', 'lrb_archive_title' );
+    add_filter( 'get_the_archive_title', 'lrb_archive_title' );

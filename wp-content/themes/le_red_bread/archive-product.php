@@ -22,6 +22,14 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 <br>
+
+    <div class="decoration">
+      <div class="slash">
+        <div class="dot"></div>
+      </div>
+    </div>
+<br>
+
 <div class= "type-container">
 	<div class="type-list">
 		<?php $terms = get_terms( 'product_type' );?>
@@ -29,8 +37,9 @@ get_header(); ?>
 		<?php foreach ($terms as $term) : ?>
 			<div class="type-item">
 				<div clas="type-image">
+          <div class= "product-type-image">
 					<img src="<?php echo  get_template_directory_uri() . "/images\/" . $term->slug; ?>.png" alt="" />
-
+          </div>
 				</div>
 				<div class="type-info">
 					<span class="type-title"><h3><?php echo $term->name; ?></h3></span>
@@ -47,7 +56,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
         <div class="product-item">
           <? if (has_post_thumbnail() ) : ?>
-					<a href="<?php echo the_permalink($product);?>">
+					<a href="<?php echo the_permalink();?>">
 				      <?php the_post_thumbnail ( 'medium' ); ?>
 					</a>
             <?php endif; ?>

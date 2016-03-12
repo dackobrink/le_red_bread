@@ -30,6 +30,11 @@ get_header(); ?>
           </div>
         </div>
           <?php endif; ?>
+          <div class= "see-more-container">
+            <div class="see-more-here"><p>All our products are made fresh daily from locally-sourced ingredients. Our menu is updated frequently.
+              <a href "http://localhost:3000/le_red_bread/products" class="see-more-button">See Our Products</a>
+            </div>
+          </div>
 
       <br>
 
@@ -37,8 +42,9 @@ get_header(); ?>
             <span class="front-title"><h2>Our Latest News</h2></span>
 
             <div class="decoration">
-              <div class="dot"></div>
-              <div class="slash"></div>
+              <div class="slash">
+                <div class="dot"></div>
+              </div>
             </div>
 
         <div class= "featured-container">
@@ -67,14 +73,52 @@ get_header(); ?>
 
       <section class = "testimonials">
         <span class="front title"><h2> What others say about us </h2></span>
-          <div class="decoration">
+        <div class="decoration">
+          <div class="slash">
             <div class="dot"></div>
+
           </div>
+        </div>
 
           <div class="testimonials-container">
             <ul>
-              <li><img width="100" height=""
+              <li><div class="testimonials">
+                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+                <div class="review-info"><p>Healthy food be damned! If you are a bakery and sweet addict like myself this place is life changing. So many goodies. Have a cheat day and eat all the pretzels!</p>
+                  <div class="review-name">Dr Dosist</div>
+                  <div class="review-title">Nutritionist</div>
+                  <div class="review-company">Health Time Clinic</div>
+                </di>
+              </div>
               </li>
+              <li><div class="testimonials">
+                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+                <div class="review-info"><p>Do you like bread? Seriously, who doesn’t? You have to check Le Red Bread’s lovely loaves. Fresh flavours every day…need I say more?</p>
+                  <div class="review-name">Maxi Milli</div>
+                  <div class="review-title">Chef</div>
+                  <div class="review-company">Sailor Spoon</div>
+                </di>
+              </div>
+              </li>
+              <li><div class="testimonials">
+                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+                <div class="review-info"><p>Excellent cookies! They always have unique flavours and the cookies are always super fresh. Make sure you get them before they sell out! And keep an eye out on holidays, the flavour combinations they come up with are brilliant. Delicious!</p>
+                  <div class="review-name">Anna Vandana</div>
+                  <div class="review-title">Author</div>
+                  <div class="review-company">Food is Great Magazine</div>
+                </di>
+              </div>
+              </li>
+              <li><div class="testimonials">
+                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+                <div class="review-info"><p>Where has this bakery been all my life! I absolutely love their cookies and muffins. Nom nom.</p>
+                  <div class="review-name">Martha M. Masters</div>
+                  <div class="review-title">Food Critic</div>
+                  <div class="review-company">WikiTravel</div>
+                </di>
+              </div>
+              </li>
+
             </ul>
           </div>
 

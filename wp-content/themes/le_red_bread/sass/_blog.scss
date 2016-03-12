@@ -1,8 +1,20 @@
+.blog .site-main {
+max-width: 65%;
+padding-left: 7rem;
+
+.read-more {
+  color: $fc_redbrand;
+  text-decoration: none;
+  font-family: 'open sans';
+  font-weight: 700;
+}
+
+}
 
 
 .entry-header {
-  margin-top: 3rem;
-  margin-left: 6rem;
+  width: 80%;
+  padding-top: 3rem;
 
 }
 
@@ -15,15 +27,18 @@
 
 .entry-meta {
   color: $fc_lightgrey;
-  font-family: 'open sans, sans-serif'
+  font-family: 'open sans';
+  font-weight: 100;
 
 }
 
 .entry-content {
   color: $fc_medgrey;
   font-family: 'overlock';
-}
+  width: 100%;
+  font-weight: 100;
 
-.entry-content p {
-  margin-left: 6rem;
+  p{
+    font-family: 'open sans';
+  }
 }

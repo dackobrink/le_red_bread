@@ -19,26 +19,23 @@ a {
 	color: $fc_medgrey;
 	font-size: $base_size;
 
-	&:active {
-		color:$fc_redbrand;
-	}
-	&:focus,
-	&:hover,
-	&:focus,
-	&:active {
-		color: $fc_brownbrand;
-	}
+			&:active {
+			color:$fc_redbrand;
+			}
+		&:focus,
+		&:hover,
+		&:focus,
+		&:active {
+			color: $fc_brownbrand;
+		}
 
-	&:hover,
-	&:active {
-		outline: 0;
-	}
-
-	&.ex1:hover, &.ex1:active {
-    color: red;
+		&:hover,
+		&:active {
+			outline: 0;
+		}
 }
 
-}
+
 
 /* Menus */
 
@@ -102,9 +99,9 @@ a {
 		float: left;
 		position: relative;
 		padding: 1rem;
-		border-bottom: $brand_border;
+		// border-bottom: $brand_border;
 		border-right: $brand_border;
-		font-weight: bold;
+		font-weight: 600;
 		font-size: 16px;
 
 			:first-child {
@@ -165,3 +162,12 @@ a {
 		width: 50%;
 	}
 }
+
+.main-navigation .current-menu-item{
+	border-bottom: 2px solid $fc_redbrand;
+>a {
+	color: $fc_brownbrand;
+}
+}
+//
+// }
