@@ -14,6 +14,8 @@ $brand_border: 1px solid #e1e1e1;
 
 .site-footer {
 background-color: $fc_darkgrey;
+position: absolute;
+width: 100vw;
 }
 
 .site-info {
@@ -47,7 +49,7 @@ list-style-type: none;
 
 .footer-business {
   list-style-type: none;
-  overflow: none;
+  overflow: hidden;
   color: white;
   margin-right: 5rem;
 
@@ -72,13 +74,14 @@ list-style-type: none;
 .footer-logo {
   img {
     margin-top: 3rem;
+    margin-left: 6rem;
   }
 }
 #footer-title {
   color: $fc_medgrey;
   font-family: 'overlock';
   text-transform: uppercase;
-  font-weight: light;
+  font-weight: lighter;
 }
 
 .copyright {
@@ -86,6 +89,7 @@ list-style-type: none;
   line-height: 3rem;
   text-align: center;
   color: $bg_white;
-  font-size: 0.7rem;
-  font-family: 'overlock';
+  font-size: 0.8rem;
+  font-weight: 100;
+  font-family: 'open sans';
 }

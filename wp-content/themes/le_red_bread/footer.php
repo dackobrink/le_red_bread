@@ -25,7 +25,7 @@
 					</ul>
 
 					<div class="footer-logo">
-						<img src="<?php bloginfo('template_directory'); ?>/images/lrb-logo-white.svg" class="logo" width="300" heightt="60" alt="Le Red Bread logo">
+						<img width="250" height="52" src="<?php bloginfo('template_directory'); ?>/images/lrb-logo-white.svg" class="logo" width="300" heightt="60" alt="Le Red Bread logo">
 					</div>
 
 					<ul class="footer-business">

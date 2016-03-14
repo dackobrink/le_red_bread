@@ -1,3 +1,5 @@
+
+$t_bdr: 1px dashed #e1e1e1;
 //**FRONT PAGE GENERAL **//
 
 .front-title {
@@ -61,14 +63,31 @@
 		text-transform: uppercase;
 	}
 
-
+ .type-info {
+	 p{
+		 a{
+			 color: $fc_redbrand;
+			 text-decoration: none;
+		 }
+		 a:active, a:focus, a:hover {
+			 text-decoration: underline;
+			 color:$fc_brownbrand;
+		 }
+	 }
+ }
 }
+
+
 
 .see-more-container{
 	display: flex;
 	width: 100vw;
 	justify-content: center;
 	align-items: center;
+}
+
+.see-more-2 {
+	margin-bottom: 6rem;
 }
 
 .see-more-here {
@@ -178,3 +197,64 @@
 				 }
 
 	}
+
+	//*** TESTIMONIALS **//
+
+.testimonials {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+
+}
+
+.testimonials-container {
+	display: flex;
+	width: 1024px;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-family: 'open sans';
+	font-weight: 100;
+	font-size: 1rem;
+
+
+ 	.review-container{
+
+			width: 1024px;
+		ul{
+			display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-right: 4.4rem;
+		margin-bottom: 3rem;
+	 		 li:nth-child(1)  {
+				 border-right: $t_bdr;
+		 		border-bottom:$t_bdr;
+				 }
+		 		li:nth-child(2)  {
+					border-bottom:$t_bdr;
+			}
+				li:nth-child(3)  {
+ 					border-right:$t_bdr;
+			}
+			li {
+				flex: 1 0 50%;
+				display: flex;
+				padding: 1.5rem;
+				max-width: 50%;
+				.review-name {
+					font-weight: 600;
+				}
+
+				.review-info {
+					margin-left: 1rem;
+				}
+				.review-company {
+				color: $fc_redbrand;
+			}
+			}
+		}
+	}
+
+
+}

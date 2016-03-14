@@ -17,7 +17,6 @@ get_header(); ?>
 
           <div class="decoration">
             <div class="slash">
-                <div class="dot"></div>
             </div>
           </div>
 
@@ -38,6 +37,15 @@ get_header(); ?>
           <h2>Our Story</h2>
           <?php echo CFS()->get('our_story_copy'); ?>
         </div>
+        <br>
+        <section class="-click-see-more">
+        <div class= "see-more-2">
+          <div class="see-more-here"><p>Feel free to contact us with any questions coments or suggestions. We even take custom orders!
+            <a href "http://localhost:3000/le_red_bread/products" class="see-more-button">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
       </div>
     </div>
     </main>

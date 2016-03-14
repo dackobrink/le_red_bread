@@ -55,14 +55,15 @@ get_header(); ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
         <div class="product-item">
-          <? if (has_post_thumbnail() ) : ?>
+          <?php if (has_post_thumbnail() ) : ?>
 					<a href="<?php echo the_permalink();?>">
 				      <?php the_post_thumbnail ( 'medium' ); ?>
 					</a>
             <?php endif; ?>
             <div class="product-info">
-              <?php the_title(); ?>
-              <?php echo CFS()->get ( 'price' ); ?>
+          		<span class= "dot-item"> <?php the_title(); ?> </span>
+							<span class="dots"></span>
+            	<span class"dot-price"><?php echo CFS()->get ( 'price' ); ?> </span>
             </div>
           </div>
 		<?php endwhile; ?>

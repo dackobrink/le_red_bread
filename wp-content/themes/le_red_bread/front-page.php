@@ -22,7 +22,7 @@ get_header(); ?>
                 <div class="type-info">
                   <span class="type-title"><h3><?php echo $term->name; ?></h3></span>
                   <p><?php echo $term->description; ?>
-                  <?php echo $term->description; ?> <a href="<?php echo get_term_link( $term ); ?>">See More...</a>
+                  <a href="<?php echo get_term_link( $term ); ?>">See More...</a>
                   </p>
                 </div>
               </div>
@@ -72,57 +72,53 @@ get_header(); ?>
 
 
       <section class = "testimonials">
-        <span class="front title"><h2> What others say about us </h2></span>
+        <div class= "testimonials-container">
+        <span class="front-title"><h2> What others say about us </h2></span>
+
         <div class="decoration">
           <div class="slash">
             <div class="dot"></div>
-
           </div>
         </div>
 
-          <div class="testimonials-container">
+        <div class="review-container">
             <ul>
-              <li><div class="testimonials">
-                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+              <li><div class="testimonials health">
+                <div class="review-image">	<img height ="300" width="300"  src="<?php bloginfo('template_directory'); ?>/images/dr-dosist-headshot.png" class="headshot" alt="Dr Dosist"></div>
                 <div class="review-info"><p>Healthy food be damned! If you are a bakery and sweet addict like myself this place is life changing. So many goodies. Have a cheat day and eat all the pretzels!</p>
-                  <div class="review-name">Dr Dosist</div>
-                  <div class="review-title">Nutritionist</div>
-                  <div class="review-company">Health Time Clinic</div>
-                </di>
+                  <div class="review-name">Dr. Dosist</div>
+                  <p>Nutritionist - <span class="review-company"> Health Time Clinic</span></p>
+                </div>
               </div>
               </li>
-              <li><div class="testimonials">
-                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+              <li><div class="testimonials expert">
+                <div class="review-image">	<img height ="300" width="300"  src="<?php bloginfo('template_directory'); ?>/images/maxi-milli-headshot.png" class="headshot" alt="Maxi Milli"></div>
                 <div class="review-info"><p>Do you like bread? Seriously, who doesn’t? You have to check Le Red Bread’s lovely loaves. Fresh flavours every day…need I say more?</p>
                   <div class="review-name">Maxi Milli</div>
-                  <div class="review-title">Chef</div>
-                  <div class="review-company">Sailor Spoon</div>
-                </di>
+                  <p>Chef - <span class="review-company"> Sailor Spoon</span></p>
+                </div>
               </div>
               </li>
-              <li><div class="testimonials">
-                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+              <li><div class="testimonials peer">
+                <div class="review-image">	<img height ="500" width="500"   src="<?php bloginfo('template_directory'); ?>/images/ana-vandana-headshot.png" class="headshot" alt="Ana Vandana"></div>
                 <div class="review-info"><p>Excellent cookies! They always have unique flavours and the cookies are always super fresh. Make sure you get them before they sell out! And keep an eye out on holidays, the flavour combinations they come up with are brilliant. Delicious!</p>
                   <div class="review-name">Anna Vandana</div>
-                  <div class="review-title">Author</div>
-                  <div class="review-company">Food is Great Magazine</div>
-                </di>
+                  <p>Author - <span class="review-company"> Food is Great Magazine</span></p>
+                </div>
               </div>
               </li>
-              <li><div class="testimonials">
-                <div class="review-image"><img width="100" height="100" src=./images/dr-dosist-headshot.png/></div>
+              <li><div class="testimonials author">
+                <div class="review-image">	<img  height ="200" width="200" src="<?php bloginfo('template_directory'); ?>/images/martha-m-masters-headshot.png" class="headshot" alt="Martha M Masters"></div>
                 <div class="review-info"><p>Where has this bakery been all my life! I absolutely love their cookies and muffins. Nom nom.</p>
                   <div class="review-name">Martha M. Masters</div>
-                  <div class="review-title">Food Critic</div>
-                  <div class="review-company">WikiTravel</div>
-                </di>
+                  <p>Author - <span class="review-company"> WikiTravel</span></p>
+                </div>
               </div>
               </li>
 
             </ul>
           </div>
-
-
+        </div>
       </section>
     </main>
   </div>
