@@ -48,8 +48,9 @@ wp-content/*
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
 wp-content/plugins/*
-!wp-content/plugins/lrb-functionality/
-!wp-content/plugins/business-hours-widget/
+!wp-content/plugins/lrb_functionality/
+!wp-content/plugins/lrb-business-hours-widget/
+
 
 # Ignore everything in "themes" except the active theme. #
 # ========================================================== #
